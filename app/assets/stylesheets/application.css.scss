@@ -1,0 +1,18 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+ .user-info {
+   margin-top: 9px;
+ }
+ 
+ .nav {
+   margin-top: 5px;
+ }
+
+body { 
+  background: url(http://i.stack.imgur.com/1Tzky.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
