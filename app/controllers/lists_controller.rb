@@ -10,8 +10,9 @@ class ListsController < ApplicationController
   end
 
   def create
+    
     @list = List.new(list_params)
- 
+    @list.user_id = current_user.id
     if @list.save
      flash[:notice] = "List was saved."
      redirect_to @list
@@ -35,6 +36,17 @@ class ListsController < ApplicationController
      render :edit
    end
  end
+
+
+  def destroy
+    @list = List.find(params[:id])
+    if @list.destroy
+      redirect_to new_list_path, notice: "List was successfully deleted"
+    else
+      flash[:error] = "Error deleting list.  Please try again"
+      render show
+    end
+  end
 
 private
 def list_params
