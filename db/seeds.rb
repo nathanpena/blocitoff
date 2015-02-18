@@ -8,7 +8,7 @@ Item.delete_all
      username: Faker::Name.name,
      email:    Faker::Internet.email,
      password: Faker::Lorem.characters(10),
-     avatar:   Faker::Avatar.image
+     remote_avatar_url: Faker::Avatar.image
    )
    user.skip_confirmation!
    user.save!
@@ -18,10 +18,11 @@ Item.delete_all
    username: 'Nathan Pena',
    email:    'nnpena@outlook.com',
    password: 'helloworld',
+   remote_avatar_url: Faker::Avatar.image
  )
  me.skip_confirmation!
  me.save!
- 
+
  users = User.all
 
   # Create Lists
