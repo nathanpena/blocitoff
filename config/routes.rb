@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: [:update]
   
   resources :lists, except: [:index] do
-    resources :items, only: [:create]
+    resources :items, only: [:create, :destroy]
   end
 
   get 'about', to: 'welcome#about'
