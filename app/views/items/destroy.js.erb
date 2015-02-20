@@ -1,5 +1,4 @@
-<% if @item.destroyed? %>
-  $('a.glyphicon.glyphicon-unchecked').click(function(){$(this).removeClass('glyphicon-unchecked').addClass('glyphicon-ok');}); 
+<%if @item.destroyed? %>
   $('#item-' +<%= @item.id %>).fadeOut( 500 ); 
 <% else  %>
   $('#item-' +<%= @item.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>");
