@@ -7,7 +7,7 @@ Item.delete_all
    user = User.new(
      username: Faker::Name.name,
      email:    Faker::Internet.email,
-     password: Faker::Lorem.characters(10),
+     password: 'helloworld',
      remote_avatar_url: Faker::Avatar.image
    )
    user.skip_confirmation!
@@ -38,7 +38,8 @@ lists = List.all
   50.times do 
     Item.create!(
       name: Faker::Lorem.sentence,
-      list: lists.sample)
+      list: lists.sample,
+      created_at: Faker::Date.between(10.days.ago, Date.today))
   end
   
 puts "Seed finished"
