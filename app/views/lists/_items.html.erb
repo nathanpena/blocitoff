@@ -1,23 +1,24 @@
 <div class='row'>
  <div class="col-md-3"></div>
-  <div class="col-md-6">
-<table class="table table-striped table-bordered">
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Days Left</th>
-      <th>Complete</th>
-    </tr>
-  </thead>
-  <tbody>
-
-      <%= render partial: 'items/item' %>
-    <tr>
-      <td colspan="3">
-      <%= render 'items/form', list: @list %>
-      </td>
-    </tr>
-  </tbody>
-</table>
+ <div class="col-md-6">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Days Left</th>
+        <th>Complete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%# tr tag and td tags in partial %>
+        <%= render partial: 'items/item' %> 
+      <%# closing tags in partial %>   
+      <tr>
+        <td colspan="3">
+          <%= render 'items/form', list: @list %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 </div>

@@ -2,6 +2,6 @@ class Item < ActiveRecord::Base
   belongs_to :list
 
   def days_left
-   ((created_at.to_date + 6.days) - DateTime.now.to_date).to_i
+   ((created_at.to_date + 7.days) - DateTime.now.to_date).to_i
   end
 end
