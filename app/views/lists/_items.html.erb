@@ -12,9 +12,9 @@
   <tbody>
 
       <%= render partial: 'items/item' %>
-
+    <tr>
       <td colspan="3">
-      <%= render 'items/form', list: @list, item: @list.items %>
+      <%= render 'items/form', list: @list %>
       </td>
     </tr>
   </tbody>

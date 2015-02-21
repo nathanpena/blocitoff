@@ -1,7 +1,7 @@
-<% @list.items.each do |f| %>
-<tr>
-<td><%= f.name %></td>
-<td></td>
-<td></td>
-</tr>
+<% @list.items.each do |item| %>
+  <%= content_tag :tr, id: "item-#{item.id}" do %>
+  <td><%= item.name %></td>
+  <td><%= item.days_left %> </td>
+  <td><%= link_to "", [item.list, item], method: :delete, class: 'glyphicon glyphicon-unchecked', remote: true %></td>
+  <% end %>
 <% end %>
