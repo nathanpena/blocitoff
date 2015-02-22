@@ -15,8 +15,8 @@ Item.delete_all
  end
 
   me = User.new(
-   username: 'Nathan Pena',
-   email:    'nnpena@outlook.com',
+   username: 'Tyler Ferraro',
+   email:    'tyler@gmail.com',
    password: 'helloworld',
    remote_avatar_url: Faker::Avatar.image
  )
